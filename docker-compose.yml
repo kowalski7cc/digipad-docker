@@ -1,0 +1,39 @@
+version: '3.7'
+
+services:
+  redis:
+    image: 7.0.10-alpine
+    environment:
+      - REDIS_PASSWORD="changeme"
+
+
+  digipad:
+    image: digipad:1.0.4
+    environment:
+      - DOMAIN=""
+      - HOST=""
+      - PORT="3000"
+      - DB_HOST="redis"
+      - DB_PWD="changeme"
+      - DB_PORT="6379"
+      - SESSION_KEY=""
+      - SESSION_DURATION=""
+      - ETHERPAD=""
+      - ETHERPAD_API_KEY=""
+      - UPLOAD_LIMIT=""
+      - UPLOAD_FILE_TYPES=""
+      - PAD_LIMIT=""
+      - CRON_TASK_DATE=""
+      - ADMIN_PASSWORD=""
+      - EMAIL_HOST=""
+      - EMAIL_ADDRESS=""
+      - EMAIL_PASSWORD=""
+      - EMAIL_PORT=""
+      - EMAIL_SECURE=""
+      - MATOMO=""
+      - MATOMO_SITE_ID=""
+      - NFS_PAD_NUMBER=""
+      - NFS_FOLDER=""
+      - NFS2_PAD_NUMBER=""
+      - NFS2_FOLDER=""
+      - AUTORIZED_DOMAINS=""
